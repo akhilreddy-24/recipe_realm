@@ -40,15 +40,6 @@ const PostCard = ({ post }: PostCardProps) => {
               </p>
               -
               <p className="subtle-semibold lg:small-regular">
-              <p> Ingedients:</p><ul className="flex gap-1 mt-2">
-                {post?.tags.map((tag: string, index: string) => (
-                  <li
-                    key={`${tag}${index}`}
-                    className="text-light-3 small-regular">
-                    {tag},
-                  </li>
-                ))}
-              </ul>
               </p>
             </div>
           </div>
@@ -75,6 +66,17 @@ const PostCard = ({ post }: PostCardProps) => {
           className="post-card_img"
           alt="post image" />
 
+<p>Ingredients:</p>
+<ul className="flex flex-wrap gap-4 mt-2">
+  {post?.tags.map((tag: string, index: string) => (
+    <li
+      key={`${tag}${index}`}
+      className="text-light-3 small-regular bg-gray-200 px-2 py-1 rounded">
+      {tag}
+    </li>
+  ))}
+</ul>
+        <br/><br/>
       </Link>
 
       <PostStats post={post} userId={user.id} />
