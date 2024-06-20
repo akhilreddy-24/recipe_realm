@@ -1,3 +1,8 @@
+import GridPostList from "@/components/shared/GridPostList";
+import Loader from "@/components/shared/Loader";
+import { Button } from "@/components/ui/button";
+import { useUserContext } from "@/context/AuthContext";
+import { useGetUserById } from "@/lib/react-query/queriesAndMutations";
 import {
   Route,
   Routes,
@@ -6,16 +11,8 @@ import {
   useParams,
   useLocation,
 } from "react-router-dom";
+import LikedPosts from "./LikedPosts";
 
-
-import { LikedPosts } from "@/_root/pages";
-import { useUserContext } from "@/context/AuthContext";
-
-
-import { Button } from "@/components/ui/button";
-import GridPostList from "@/components/shared/GridPostList";
-import Loader from "@/components/shared/Loader";
-import { useGetUserById } from "@/lib/react-query/queriesAndMutations";
 
 
 
@@ -26,7 +23,7 @@ interface StabBlockProps {
 
 const StatBlock = ({ value, label }: StabBlockProps) => (
   <div className="flex-center gap-2">
-    <p className="small-semibold lg:body-bold text-orange-500">{value}</p>
+    <p className="small-semibold lg:body-bold text-primary-500">{value}</p>
     <p className="small-medium lg:base-medium text-light-2">{label}</p>
   </div>
 );
