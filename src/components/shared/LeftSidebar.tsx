@@ -28,7 +28,7 @@ const LeftSidebar = () => {
             <img
               src="/assets/images/recipe.jpg"
               alt="logo"
-              width={85}
+              width={50}
               height={18}
             />
                 </Link>
