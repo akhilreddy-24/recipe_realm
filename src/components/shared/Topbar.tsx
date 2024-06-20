@@ -23,7 +23,7 @@ const Topbar = () => {
             src="/assets/images/recipe.jpg"
             alt="logo"
             width={130}
-            height={325}
+            height={200}
           />
         </Link>
 
