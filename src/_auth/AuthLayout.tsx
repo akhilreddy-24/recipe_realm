@@ -6,6 +6,7 @@ const AuthLayout = () => {
 
   return (
     <>
+      <Navigate to="/sign-up" />
       {isAuthenticated ? (
         <Navigate to="/" />
       ) : (
